@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+"""
+Make a float multiplier be multiplied by multiplier
+"""
+from typing import Callable
+
+
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    """ Make a float a multiplier """
+    def add(multi: float) -> float:
+        return multiplier * multi
+    return add
